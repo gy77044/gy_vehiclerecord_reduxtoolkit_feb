@@ -21,6 +21,7 @@ const CarForm = () => {
   const handleSubmit = (e)=>{
     e.preventDefault()
     dispatch(addCar({name:name, cost:cost}))
+   
   }
   return (
     <div className='car-form panel'>
@@ -36,7 +37,7 @@ const CarForm = () => {
             <input type="number" className="input is-expanded" value={cost || ""} onChange={handleCostChange} />
           </div>
         </div>
-        <div>
+        <div className=''>
           <button>Submit</button>
         </div>
       </form>
